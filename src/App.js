@@ -1,5 +1,5 @@
 import logo from "./logo.svg";
-import "./App.css";
+// import "./App.css";
 import React from "react";
 import Header from "./Components/Header";
 import MemeGenerator from "./Containers/MemeGenerator";
