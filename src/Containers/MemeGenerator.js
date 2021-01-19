@@ -17,12 +17,38 @@ class MemeGenerator extends React.Component {
       });
   }
 
+  changeHandler = (e) => {
+    this.setState({
+      [e.target.name]: e.target.value,
+    });
+  };
+
   render() {
     return (
       <>
         <form>
+          <br />
+          <input
+            type="text"
+            placeholder="Top Text"
+            name="topText"
+            value={this.state.topText}
+            onChange={this.changeHandler}
+          />
+          <input
+            type="text"
+            placeholder="Bottom Text "
+            name="bottomText"
+            value={this.state.bottomText}
+            onChange={this.changeHandler}
+          />
+
+          <br />
+
           <button>Generate</button>
         </form>
+        <h2>{this.state.bottomText}</h2>
+        <h2>{this.state.topText}</h2>
       </>
     );
   }
